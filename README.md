@@ -1,58 +1,125 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Orderly – Order Management System
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Project Description
 
-## About Laravel
+Orderly is a web-based Order Management System developed using Laravel and MySQL. It helps users manage items and orders through a simple and user-friendly interface.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Features
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Authentication
+- User Registration
+- User Login
+- User Logout
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Item Management
+- View all items
+- Add new items
+- Edit item information
+- Delete items
+- Search items by name or description
+- Pagination
+- Prevent deletion of items that are already used in orders
 
-## Learning Laravel
+### Order Management
+- View all orders
+- Create new orders
+- Select items and quantities
+- Automatically calculate order totals
+- View order details
+- Update order information and status
+- Delete orders
+- Search orders
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### Order Status
+- Pending
+- Processing
+- Completed
+- Cancelled
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Technologies Used
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+- **Backend:** PHP, Laravel
+- **Frontend:** HTML, CSS, JavaScript, Bootstrap 5, Laravel Blade
+- **Database:** MySQL
+- **Tools:** Visual Studio Code, Git, GitHub
 
-## Agentic Development
+## Installation Guide
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+Follow these steps to run the project locally.
+
+### 1. Clone the Repository
 
 ```bash
-composer require laravel/boost --dev
-
-php artisan boost:install
+git clone https://github.com/moehtethtetaung375/orderly.git
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+### 2. Go to the Project Folder
 
-## Contributing
+```bash
+cd orderly
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 3. Install Dependencies
 
-## Code of Conduct
+```bash
+composer install
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### 4. Create the Environment File
 
-## Security Vulnerabilities
+For Windows PowerShell:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```powershell
+Copy-Item .env.example .env
+```
 
-## License
+### 5. Generate the Application Key
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```bash
+php artisan key:generate
+```
+
+### 6. Configure the Database
+
+Create a MySQL database named `orderly`.
+
+Update the database settings in the `.env` file according to your MySQL configuration.
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=orderly
+DB_USERNAME=root
+DB_PASSWORD=your_password
+```
+
+### 7. Run Migrations
+
+```bash
+php artisan migrate
+```
+
+### 8. Start the Development Server
+
+```bash
+php artisan serve
+```
+
+Open the application in your browser:
+
+```text
+http://127.0.0.1:8000
+```
+
+## Developer
+
+**Moe Htet Htet Aung**
+
+Information Science and Technology Student
+
+University of Technology Yadanarpon Cyber City (UTYCC)
+
+## Repository
+
+https://github.com/moehtethtetaung375/orderly
